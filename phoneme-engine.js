@@ -6,9 +6,7 @@
 
 const PhonemeEngine = (() => {
 
-  /* =========================================
-     COMMON EMOTIONS — words that ALREADY exist
-     ========================================= */
+  /* Common Emotions — Words That Already Exist */
   const COMMON_WORDS = [
     { triggers: ["horny","aroused","turned on","sexually excited","lustful","want sex","feeling sexual","lust","arousal","libido","desire","sexually","horniness","lusty","carnal"],
       word: "Horny / Lustful",
@@ -72,9 +70,7 @@ const PhonemeEngine = (() => {
       explain: "Embarrassment is universally named. Try describing the *specific social geometry* of the moment — who was watching, what you wished you could undo, the echo it left." },
   ];
 
-  /* =========================================
-     CHECK IF INPUT IS A COMMON EMOTION
-     ========================================= */
+  /* Check If Input Is A Common Emotion */
   function checkCommonEmotion(text) {
     const lower = text.toLowerCase().trim();
     const words = lower.split(/\s+/);
@@ -106,9 +102,7 @@ const PhonemeEngine = (() => {
   }
 
 
-  /* =========================================
-     PHONEME INVENTORIES BY LANGUAGE FAMILY
-     ========================================= */
+  /* Phoneme Inventories By Language Family */
   const PHONEME_SETS = {
     Romance: {
       onsets: ["b","d","f","l","m","n","p","r","s","t","v","br","cr","fl","fr","gr","pr","tr","bl","cl"],
@@ -190,9 +184,7 @@ const PhonemeEngine = (() => {
     }
   };
 
-  /* =========================================
-     EMOTIONAL-PHONETIC MAPPING
-     ========================================= */
+  /* Emotional-phonetic Mapping */
   const EMOTION_SOUND_MAP = {
     soft: {
       onsets: ["m","n","l","w","y","h","sh","f","v"],
@@ -244,9 +236,7 @@ const PhonemeEngine = (() => {
     }
   };
 
-  /* =========================================
-     HELPERS
-     ========================================= */
+  /* Helpers */
   function seededRng(seed) {
     let h = 0;
     for (let i = 0; i < seed.length; i++) h = Math.imul(31, h) + seed.charCodeAt(i) | 0;
@@ -269,9 +259,7 @@ const PhonemeEngine = (() => {
 
   const isVowel = c => "aeiouäöüy".includes(c);
 
-  /* =========================================
-     ANALYZE EMOTIONAL TONE
-     ========================================= */
+  /* Analyze Emotional Tone */
   function analyzeEmotion(text) {
     const lower = text.toLowerCase();
     const words = lower.split(/\s+/);
@@ -307,9 +295,7 @@ const PhonemeEngine = (() => {
     return { primary: sorted[0][0], secondary: sorted[1][1] > 0 ? sorted[1][0] : sorted[0][0], scores };
   }
 
-  /* =========================================
-     FIND LANGUAGE FAMILIES FOR INPUT
-     ========================================= */
+  /* Find Language Families For Input */
   function findFamilies(text) {
     const lower = text.toLowerCase();
     const famScores = {};
@@ -327,9 +313,7 @@ const PhonemeEngine = (() => {
     return sorted.slice(0,3).map(s => s[0]);
   }
 
-  /* =========================================
-     GENERATE SYLLABLE
-     ========================================= */
+  /* Generate Syllable */
   function makeSyllable(phonemes, emotionProfile, rng) {
     const onset = pickWeighted(emotionProfile.onsets, phonemes.onsets, rng);
     const nucleus = pickWeighted(emotionProfile.nuclei, phonemes.nuclei, rng);
@@ -337,9 +321,7 @@ const PhonemeEngine = (() => {
     return onset + nucleus + coda;
   }
 
-  /* =========================================
-     GENERATE WORD
-     ========================================= */
+  /* Generate Word */
   function generateWord(text) {
     const emotion = analyzeEmotion(text);
     const families = findFamilies(text);
@@ -396,9 +378,7 @@ const PhonemeEngine = (() => {
     return { word, families: [pf,sf], emotion };
   }
 
-  /* =========================================
-     IPA PRONUNCIATION
-     ========================================= */
+  /* Ipa Pronunciation */
   function makePronunciation(word) {
     const lower = word.toLowerCase();
     const vMap = {"a":"a","e":"ɛ","i":"i","o":"o","u":"u"};
@@ -427,9 +407,7 @@ const PhonemeEngine = (() => {
     return result + "/";
   }
 
-  /* =========================================
-     ETYMOLOGY
-     ========================================= */
+  /* Etymology */
   function makeEtymology(families, emotion) {
     const names = families.map(f => {
       const data = LANGUAGE_FAMILIES[f];
@@ -448,9 +426,7 @@ const PhonemeEngine = (() => {
     }).concat([`Emotional register: ${emotion.primary}`]).join(" · ");
   }
 
-  /* =========================================
-     PUBLIC API
-     ========================================= */
+  /* Public Api */
   function nameTheUnnameable(description) {
     const r = generateWord(description);
     return {

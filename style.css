@@ -50,7 +50,7 @@ body{
 ::selection{background:var(--accent-d);color:#fff}
 a,button,input,textarea{cursor:none}
 
-/* =============== CURSOR =============== */
+/* Cursor */
 .cursor{
   position:fixed;top:0;left:0;
   pointer-events:none;z-index:9999;
@@ -75,7 +75,7 @@ a,button,input,textarea{cursor:none}
   pointer-events:none;z-index:0;
 }
 
-/* =============== GRAIN =============== */
+/* Grain */
 .grain{
   position:fixed;inset:0;z-index:9998;
   pointer-events:none;opacity:.03;
@@ -83,7 +83,7 @@ a,button,input,textarea{cursor:none}
   background-size:200px;
 }
 
-/* =============== AMBIENT ORBS =============== */
+/* Ambient Orbs */
 .ambient{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
 .orb{position:absolute;border-radius:50%;filter:blur(100px);opacity:.3}
 .orb.o1{width:500px;height:500px;top:-10%;left:-5%;background:radial-gradient(circle,var(--accent-d),transparent 70%);animation:drift1 22s ease infinite alternate}
@@ -93,7 +93,7 @@ a,button,input,textarea{cursor:none}
 @keyframes drift2{to{transform:translate(-100px,-70px) scale(.9)}}
 @keyframes drift3{to{transform:translate(-140px,50px) scale(1.12)}}
 
-/* =============== SECTIONS =============== */
+/* Sections */
 .s{
   position:fixed;inset:0;
   display:flex;align-items:center;justify-content:center;
@@ -120,7 +120,7 @@ a,button,input,textarea{cursor:none}
 .s.active [data-reveal][data-delay="1.6"]{transition-delay:1.6s}
 .s.active [data-reveal][data-delay="2"]{transition-delay:2s}
 
-/* =============== LAYOUT HELPERS =============== */
+/* Layout Helpers */
 .page-center{
   text-align:center;
   max-width:620px;width:100%;
@@ -141,7 +141,7 @@ a,button,input,textarea{cursor:none}
   padding:3rem 2rem 5rem;
 }
 
-/* =============== LANDING =============== */
+/* Landing */
 .landing-inner{text-align:center;max-width:800px;padding:2rem}
 
 .whisper{
@@ -176,7 +176,7 @@ a,button,input,textarea{cursor:none}
   margin-bottom:clamp(2.5rem,6vh,4rem);
 }
 
-/* =============== CTA BUTTON =============== */
+/* Cta Button */
 .cta-btn{
   position:relative;display:inline-flex;align-items:center;gap:.55rem;
   background:var(--surface-2);
@@ -219,7 +219,7 @@ a,button,input,textarea{cursor:none}
 }
 .link-btn:hover{color:var(--fg)}
 
-/* =============== DESCRIBE =============== */
+/* Describe */
 .step-label{
   display:inline-block;
   font-family:var(--f-mono);
@@ -278,7 +278,7 @@ a,button,input,textarea{cursor:none}
 }
 .footnote strong{color:var(--fg3);font-weight:500}
 
-/* =============== SCANNER =============== */
+/* Scanner */
 .scanner{
   position:relative;width:130px;height:130px;
   margin:0 auto 2rem;
@@ -328,7 +328,7 @@ a,button,input,textarea{cursor:none}
   border-radius:2px;transition:width .3s;
 }
 
-/* =============== REVEAL / RESULTS =============== */
+/* Reveal / Results */
 .pill{
   display:inline-block;
   font-family:var(--f-mono);font-size:.62rem;font-weight:500;
@@ -425,7 +425,7 @@ a,button,input,textarea{cursor:none}
   padding-bottom:3rem;
 }
 
-/* =============== LEXICON =============== */
+/* Lexicon */
 .lex-page{
   width:100%;max-width:920px;height:100%;
   padding:3rem 2rem 5rem;
@@ -512,7 +512,7 @@ a,button,input,textarea{cursor:none}
 .empty-sym{font-size:2.5rem;opacity:.2;margin-bottom:.5rem}
 .lex-empty .subtle{font-size:.88rem;color:var(--fg4);font-style:italic;margin-top:.25rem}
 
-/* =============== NAV =============== */
+/* Nav */
 .nav{
   position:fixed;bottom:1.8rem;left:50%;
   transform:translateX(-50%);
@@ -537,13 +537,13 @@ a,button,input,textarea{cursor:none}
 }
 .nav-item.on::after{width:100%}
 
-/* =============== KEYFRAMES =============== */
+/* Keyframes */
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes pulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.5)}}
 @keyframes popIn{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
 @keyframes cardUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 
-/* =============== RESPONSIVE =============== */
+/* Responsive */
 @media(max-width:768px){
   .cursor,.cursor-aura{display:none!important}
   html,body,a,button,input,textarea{cursor:auto}

@@ -5,7 +5,7 @@
    ============================================ */
 
 const UNTRANSLATABLE_WORDS = [
-  // --- Japanese ---
+  // Japanese
   {
     word: "Mono no aware",
     language: "Japanese",
@@ -63,7 +63,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["broken", "repair", "gold", "beauty", "damage", "healing", "scars", "history", "resilience", "mend", "stronger"]
   },
 
-  // --- Portuguese ---
+  // Portuguese
   {
     word: "Saudade",
     language: "Portuguese",
@@ -79,7 +79,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["improvise", "solution", "creative", "resourceful", "problem", "fix", "clever", "makeshift", "adapt", "ingenuity"]
   },
 
-  // --- German ---
+  // German
   {
     word: "Waldeinsamkeit",
     language: "German",
@@ -123,7 +123,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["security", "comfort", "safety", "protected", "warm", "love", "shelter", "belonging", "cozy", "home", "held", "embrace"]
   },
 
-  // --- Danish ---
+  // Danish
   {
     word: "Hygge",
     language: "Danish",
@@ -132,7 +132,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["cozy", "warm", "comfort", "candles", "together", "contentment", "present", "winter", "blankets", "friends", "calm", "simple"]
   },
 
-  // --- Finnish ---
+  // Finnish
   {
     word: "Sisu",
     language: "Finnish",
@@ -148,7 +148,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["alone", "home", "drinking", "relax", "antisocial", "underwear", "comfort", "solitary", "evening", "introvert"]
   },
 
-  // --- Korean ---
+  // Korean
   {
     word: "Han",
     language: "Korean",
@@ -171,7 +171,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["intuition", "social", "awareness", "reading", "emotions", "subtle", "empathy", "perceptive", "mood", "unspoken", "sense"]
   },
 
-  // --- Swedish ---
+  // Swedish
   {
     word: "Lagom",
     language: "Swedish",
@@ -194,7 +194,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["moon", "water", "reflection", "light", "night", "sea", "lake", "shimmering", "path", "glow", "silver"]
   },
 
-  // --- Turkish ---
+  // Turkish
   {
     word: "Yakamoz",
     language: "Turkish",
@@ -210,7 +210,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["melancholy", "collective", "communal", "decline", "spiritual", "city", "shared", "sadness", "cultural", "loss", "ruins"]
   },
 
-  // --- Arabic ---
+  // Arabic
   {
     word: "Tarab",
     language: "Arabic",
@@ -226,7 +226,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["love", "death", "before", "cannot live", "extreme", "devotion", "partner", "unbearable", "loss", "deep love"]
   },
 
-  // --- Czech ---
+  // Czech
   {
     word: "Litost",
     language: "Czech",
@@ -235,7 +235,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["misery", "agony", "torment", "sudden", "realization", "grief", "remorse", "self-pity", "longing", "awareness", "weakness"]
   },
 
-  // --- Russian ---
+  // Russian
   {
     word: "Toska",
     language: "Russian",
@@ -251,7 +251,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["fake", "pretentious", "vulgar", "banal", "phony", "mediocre", "shallow", "false", "tasteless", "self-important"]
   },
 
-  // --- Welsh ---
+  // Welsh
   {
     word: "Hiraeth",
     language: "Welsh",
@@ -260,7 +260,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["homesickness", "home", "return", "nostalgia", "longing", "past", "place", "belonging", "lost", "imagination", "yearning", "exile"]
   },
 
-  // --- Hawaiian ---
+  // Hawaiian
   {
     word: "Pana poʻo",
     language: "Hawaiian",
@@ -269,7 +269,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["forget", "remember", "memory", "scratch", "head", "thinking", "lost", "recall", "frustration", "tip of tongue"]
   },
 
-  // --- Yiddish ---
+  // Yiddish
   {
     word: "Luftmensch",
     language: "Yiddish",
@@ -278,7 +278,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["dreamer", "impractical", "visionary", "clouds", "air", "idealist", "imagination", "detached", "otherworldly", "unpractical"]
   },
 
-  // --- Indonesian ---
+  // Indonesian
   {
     word: "Jayus",
     language: "Indonesian",
@@ -287,7 +287,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["joke", "unfunny", "laugh", "bad", "humor", "awkward", "terrible", "funny because bad", "embarrassing", "cringe"]
   },
 
-  // --- Georgian ---
+  // Georgian
   {
     word: "Shemomedjamo",
     language: "Georgian",
@@ -296,7 +296,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["eating", "full", "delicious", "food", "cannot stop", "taste", "indulgence", "overflow", "flavor", "pleasure"]
   },
 
-  // --- Inuit ---
+  // Inuit
   {
     word: "Iktsuarpok",
     language: "Inuit",
@@ -305,7 +305,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["anticipation", "waiting", "expecting", "arrival", "restless", "eager", "checking", "looking", "coming", "excitement"]
   },
 
-  // --- Spanish ---
+  // Spanish
   {
     word: "Duende",
     language: "Spanish",
@@ -328,7 +328,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["safe", "place", "home", "strength", "authentic", "self", "belonging", "comfort", "center", "grounding", "refuge"]
   },
 
-  // --- French ---
+  // French
   {
     word: "L'appel du vide",
     language: "French",
@@ -358,7 +358,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["wander", "city", "aimless", "observe", "walk", "urban", "stroll", "purposeless", "watch", "absorb", "streets"]
   },
 
-  // --- Italian ---
+  // Italian
   {
     word: "Sprezzatura",
     language: "Italian",
@@ -374,7 +374,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["shade", "rest", "midday", "heat", "sleep", "noon", "lazy", "summer", "pause", "drowsy", "siesta"]
   },
 
-  // --- Sanskrit ---
+  // Sanskrit
   {
     word: "Mudita",
     language: "Sanskrit",
@@ -390,7 +390,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["separation", "pain", "love", "leaving", "absence", "ache", "body", "physical", "departure", "miss", "empty"]
   },
 
-  // --- Greek ---
+  // Greek
   {
     word: "Meraki",
     language: "Greek",
@@ -406,7 +406,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["honor", "respect", "duty", "virtue", "pride", "integrity", "character", "moral", "right thing", "selfless"]
   },
 
-  // --- Tagalog ---
+  // Tagalog
   {
     word: "Kilig",
     language: "Tagalog",
@@ -422,7 +422,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["cute", "squeeze", "pinch", "overwhelm", "adorable", "baby", "puppy", "urge", "overwhelming", "affection"]
   },
 
-  // --- Urdu ---
+  // Urdu
   {
     word: "Goya",
     language: "Urdu",
@@ -431,7 +431,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["story", "immersion", "fiction", "real", "vivid", "narrative", "lost in", "believe", "absorbed", "fantasy", "transported"]
   },
 
-  // --- Tshiluba ---
+  // Tshiluba
   {
     word: "Ilunga",
     language: "Tshiluba",
@@ -440,7 +440,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["forgive", "patience", "tolerance", "limit", "abuse", "second chance", "boundary", "enough", "three strikes", "forgiveness"]
   },
 
-  // --- Norwegian ---
+  // Norwegian
   {
     word: "Forelsket",
     language: "Norwegian",
@@ -456,7 +456,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["cozy", "warm", "intimate", "candlelight", "winter", "snug", "content", "comfort", "love", "blanket"]
   },
 
-  // --- Hindi ---
+  // Hindi
   {
     word: "Jugaad",
     language: "Hindi",
@@ -472,7 +472,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["separation", "love", "distance", "apart", "realization", "deepen", "absence", "longing", "grow", "miss"]
   },
 
-  // --- Thai ---
+  // Thai
   {
     word: "Greng Jai",
     language: "Thai",
@@ -481,7 +481,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["reluctance", "help", "burden", "polite", "imposing", "considerate", "shy", "asking", "favor", "guilt", "inconvenience"]
   },
 
-  // --- Malay ---
+  // Malay
   {
     word: "Pisan zapra",
     language: "Malay",
@@ -490,7 +490,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["time", "banana", "measurement", "duration", "moment", "brief", "quick", "interval"]
   },
 
-  // --- Persian ---
+  // Persian
   {
     word: "Ta'ârof",
     language: "Persian",
@@ -499,7 +499,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["politeness", "courtesy", "ritual", "social", "insist", "refuse", "offer", "manners", "custom", "generous", "humble"]
   },
 
-  // --- Pascuense ---
+  // Pascuense
   {
     word: "Tingo",
     language: "Pascuense",
@@ -508,7 +508,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["borrow", "steal", "neighbor", "return", "possessions", "gradual", "taking", "lending"]
   },
 
-  // --- Scottish Gaelic ---
+  // Scottish Gaelic
   {
     word: "Cianalas",
     language: "Scottish Gaelic",
@@ -517,7 +517,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["homesickness", "landscape", "place", "ache", "physical", "belonging", "land", "earth", "visceral", "return", "terrain"]
   },
 
-  // --- Bantu ---
+  // Bantu
   {
     word: "Ubuntu",
     language: "Bantu",
@@ -526,7 +526,7 @@ const UNTRANSLATABLE_WORDS = [
     keywords: ["community", "together", "humanity", "collective", "connection", "belonging", "shared", "people", "unity", "compassion"]
   },
 
-  // --- Dutch ---
+  // Dutch
   {
     word: "Gezellig",
     language: "Dutch",

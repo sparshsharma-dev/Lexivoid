@@ -9,10 +9,10 @@
   const $ = s => document.querySelector(s);
   const $$ = s => document.querySelectorAll(s);
 
-  /* ---- Config ---- */
+  /* Config */
   const _api = "/api/enhance";
 
-  /* ---- State ---- */
+  /* State */
   const state = {
     current: "landing",
     lexicon: JSON.parse(localStorage.getItem("void_lexicon") || "[]"),
@@ -20,7 +20,7 @@
     busy: false
   };
 
-  /* ---- DOM ---- */
+  /* Dom */
   const d = {
     cursor: $("#cursor"), aura: $("#cursor-aura"),
     nav: $("#nav"),
@@ -42,9 +42,7 @@
   const secs = {};
   $$(".s").forEach(s => { secs[s.dataset.s] = s; });
 
-  /* ============================================
-     AI: Check if word exists + enhance output
-     ============================================ */
+  /* Ai: Check If Word Exists + Enhance Output */
   async function aiCall(messages) {
     try {
       const controller = new AbortController();
@@ -116,9 +114,7 @@ Respond in EXACTLY this JSON:
     }]);
   }
 
-  /* ============================================
-     CURSOR
-     ============================================ */
+  /* Cursor */
   const Cursor = (() => {
     let mx = -100, my = -100, cx = -100, cy = -100;
 
@@ -145,9 +141,7 @@ Respond in EXACTLY this JSON:
     return { init };
   })();
 
-  /* ============================================
-     MAGNETIC ELEMENTS
-     ============================================ */
+  /* Magnetic Elements */
   function initMagnetic() {
     $$("[data-magnetic]").forEach(el => {
       el.addEventListener("mousemove", e => {
@@ -164,9 +158,7 @@ Respond in EXACTLY this JSON:
     });
   }
 
-  /* ============================================
-     TEXT SCRAMBLE
-     ============================================ */
+  /* Text Scramble */
   class Scramble {
     constructor(el) {
       this.el = el;
@@ -195,9 +187,7 @@ Respond in EXACTLY this JSON:
     }
   }
 
-  /* ============================================
-     3D TILT
-     ============================================ */
+  /* 3d Tilt */
   function initTilt() {
     $$("[data-tilt]").forEach(card => {
       card.addEventListener("mousemove", e => {
@@ -212,9 +202,7 @@ Respond in EXACTLY this JSON:
     });
   }
 
-  /* ============================================
-     NAVIGATION
-     ============================================ */
+  /* Navigation */
   function goTo(name) {
     if (state.busy && name !== "scan") return;
     Object.values(secs).forEach(s => s.classList.remove("active"));
@@ -226,9 +214,7 @@ Respond in EXACTLY this JSON:
     if (name === "lexicon") renderLexicon();
   }
 
-  /* ============================================
-     INPUT
-     ============================================ */
+  /* Input */
   function setupInput() {
     d.input.addEventListener("input", () => {
       const l = d.input.value.length;
@@ -240,9 +226,7 @@ Respond in EXACTLY this JSON:
     });
   }
 
-  /* ============================================
-     SUBMIT
-     ============================================ */
+  /* Submit */
   async function submit() {
     const desc = d.input.value.trim();
     if (desc.length < 15 || state.busy) return;
@@ -305,9 +289,7 @@ Respond in EXACTLY this JSON:
     showReveal(localResult);
   }
 
-  /* ============================================
-     SCANNER
-     ============================================ */
+  /* Scanner */
   async function runScan(langs, existing) {
     d.chipTray.innerHTML = "";
     d.progressFill.style.width = "0%";
@@ -345,9 +327,7 @@ Respond in EXACTLY this JSON:
     await wait(500);
   }
 
-  /* ============================================
-     SHOW RESULTS
-     ============================================ */
+  /* Show Results */
   function showReveal(r) {
     d.wWord.textContent = "";
     d.wIpa.textContent = r.pronunciation;
@@ -368,9 +348,7 @@ Respond in EXACTLY this JSON:
     goTo("match");
   }
 
-  /* ============================================
-     LEXICON
-     ============================================ */
+  /* Lexicon */
   function addToLexicon(r) {
     state.lexicon.unshift({
       word: r.word, pronunciation: r.pronunciation,
@@ -419,9 +397,7 @@ Respond in EXACTLY this JSON:
     goTo("describe");
   }
 
-  /* ============================================
-     EVENTS
-     ============================================ */
+  /* Events */
   function bind() {
     d.btnEnter.addEventListener("click", () => goTo("describe"));
     d.btnGo.addEventListener("click", submit);
@@ -439,15 +415,11 @@ Respond in EXACTLY this JSON:
     d.lexSearch.addEventListener("input", e => renderLexicon(e.target.value));
   }
 
-  /* ============================================
-     UTILS
-     ============================================ */
+  /* Utils */
   function wait(ms) { return new Promise(r => setTimeout(r, ms)); }
   function esc(t) { const e = document.createElement("div"); e.textContent = t; return e.innerHTML; }
 
-  /* ============================================
-     INIT
-     ============================================ */
+  /* Init */
   function init() {
     Cursor.init();
     initMagnetic();
